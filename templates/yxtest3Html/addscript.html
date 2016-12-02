@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>添加脚本</title>
+    <link rel="stylesheet" href="/static/bootstrap/css/bootstrap.min.css">
+
+    <script src="/static/jquery/jquery-3.1.0.min.js"></script>
+    <script src="/static/bootstrap/js/bootstrap.min.js"></script>
+
+    <script src="/static/yxtest3/js/addscript.js"></script>
+    <script src="/static/jquery/jquery-form.js"></script>
+
+</head>
+<body>
+<div class="container">
+    <div class="page-header">
+        <h1>新建脚本</h1>
+    </div>
+<form method="post" enctype="multipart/form-data" id="testname1">
+    <table class="table" >
+        <tbody>
+        <tr class="active" >
+            <td >脚本名称</td>
+            <td><input id="name" type="text" class="form-control" placeholder="请输入脚本名称"></td>
+        </tr>
+        <tr class="active" >
+            <td >负责人</td>
+            <td><input id="creator" type="text" class="form-control" placeholder="请输入负责人"></td>
+        </tr>
+        </tr>
+        <tr class="active" >
+            <td >对应测试</td>
+            <td><input id="test_name" type="text" class="form-control" value="{{ dic.test_name}}" readonly></td>
+
+        </tr>
+        <tr class="active" style="display: none;">
+            <td >对应测试编号</td>
+            <td><input id="test_id" type="text" class="form-control" value="{{ dic.test_id}}" readonly></td>
+
+        </tr>
+        <tr class="active" >
+            <td >添加备注</td>
+            <td><input id="remarks" type="text" class="form-control" placeholder="请在此处添加备注"></td>
+        </tr>
+        <tr class="success">
+            <td>创建时间</td>
+            <td><input type="datetime-local" id="time"></td>
+        </tr>
+        <tr>
+            <td>上传文件</td>
+            <td >
+                    <input id="id_filePath" name="filePath" type="file" required /></p>
+            </td>
+        </tr>
+        <tr class="success">
+            <td><button id="submit_btn1" type="button" class="btn btn-primary">&nbsp;&nbsp;新增&nbsp;&nbsp;</button></td>
+            <td><button id="back_btn1" type="button" class="btn btn-primary">&nbsp;&nbsp;返回&nbsp;&nbsp;</button></td>
+        </tr>
+        </tbody>
+    </table>
+</form>
+</div>
+</body>
+</html>

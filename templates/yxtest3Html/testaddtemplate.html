@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>添加测试</title>
+    <link rel="stylesheet" href="/static/bootstrap/css/bootstrap.min.css">
+
+    <script src="/static/jquery/jquery-3.1.0.min.js"></script>
+    <script src="/static/bootstrap/js/bootstrap.min.js"></script>
+
+    <script src="/static/yxtest3/js/testaddtemplate.js"></script>
+    <script src="/static/jquery/jquery-form.js"></script>
+</head>
+<body>
+<div class="container">
+    <div class="page-header">
+        <h1>新建测试</h1>
+    </div>
+    <form method="post" enctype="multipart/form-data" action="submit/" id="testname">
+    <table class="table" >
+        <tbody>
+        <tr class="active" >
+            <td >测试名称</td>
+            <td><input id="name" type="text" class="form-control" placeholder="请输入测试名称"></td>
+        </tr>
+        <tr class="active" >
+            <td >负责人</td>
+            <td><input id="creator" name="testcreator" type="text" class="form-control" placeholder="请输入负责人名字"></td>
+        </tr>
+        <tr class="success">
+            <td>创建时间</td>
+            <td><input type="datetime-local" id="time"></td>
+        </tr>
+        <tr class="active">
+            <td>状态</td>
+            <td><select id="status">
+                <option value="1">完成</option>
+                <option value="2">未完成</option>
+            </select></td>
+        </tr>
+        <tr style="display: none">
+            <td >对应的状态</td>
+            <td><input id="requirement_id"  class="form-control" value="{{ dic.requirement_id }}" readonly></td>
+        </tr>
+         <tr>
+            <td >对应的状态</td>
+            <td><input id="requirement_name"  class="form-control" value="{{ dic.requirement_name }}" readonly></td>
+        </tr>
+        <tr>
+            <td>上传文件</td>
+             <td><input type="file" name="filePath" id="doc"/>
+        </tr>
+        <tr class="success">
+            <td><button id="submit_btn1" type="button"  class="btn btn-primary">&nbsp;&nbsp;新增&nbsp;&nbsp;</button></td>
+            <td><button id="back_btn1" type="button" class="btn btn-primary">&nbsp;&nbsp;返回&nbsp;&nbsp;</button></td>
+        </tr>
+        </tbody>
+    </table>
+        </form>
+</div>
+</body>
+</html>

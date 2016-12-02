@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <link href="/static/bootstrap/css/blog.css" rel="stylesheet">
+    <link rel="stylesheet" href="/static/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/static/bootstraptable/bootstrap-table.css">
+
+    <script src="/static/jquery/jquery-3.1.0.min.js"></script>
+    <script src="/static/bootstrap/js/bootstrap.min.js"></script>
+    <script src="/static/bootstraptable/bootstrap-table.js"></script>
+    <script src="/static/bootstrap/js/bootstrap.js"></script>
+    <script src="/static/bootstraptable/locale/bootstrap-table-zh-CN.js"></script>
+
+</head>
+<body>
+<div class="container">
+    {% include 'yxtest3Html/heard.html' %}
+    <div class="row">
+        <div class="col-md-9 col-sm-9">
+            {% include 'yxtest3Html/menu.html' %}
+            <br/>
+            <table id="querylist" class="table table-striped"></table>
+        </div>
+        <div class="col-md-3 col-sm-3 ">
+        </div>
+    </div>
+</div>
+<br/><br/>
+{% include 'public/foot.html' %}
+</body>
+<script src="/static/yxtest3/js/testTable.js"></script>
+</html>

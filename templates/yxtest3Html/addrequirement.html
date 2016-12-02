@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>添加需求</title>
+    <link rel="stylesheet" href="/static/bootstrap/css/bootstrap.min.css">
+
+    <script src="/static/jquery/jquery-3.1.0.min.js"></script>
+    <script src="/static/bootstrap/js/bootstrap.min.js"></script>
+
+    <script src="/static/yxtest3/js/addrequirement.js"></script>
+</head>
+<body>
+<div class="container">
+    <div class="page-header">
+        <h1>新建需求</h1>
+    </div>
+    <table class="table" >
+        <tbody>
+        <tr class="active" >
+            <td >需求名称</td>
+            <td><input id="name" type="text" class="form-control" placeholder="请输入需求名称"></td>
+        </tr>
+        <tr class="success">
+            <td>创建时间</td>
+            <td><input type="datetime-local" id="time"></td>
+        </tr>
+        <tr class="warning">
+            <td>需求根节点</td>
+            <td><select id="root">{% for key,value in requirementSet.items %}
+                <option value="{{ key }}">{{ value }}</option>
+            {% endfor %}</select></td>
+        </tr>
+        <tr class="danger">
+            <td>上一个需求</td>
+            <td><select id="pre">{% for key,value in requirementSet.items %}
+                <option value="{{ key }}">{{ value }}</option>
+            {% endfor %}</select></td>
+        </tr>
+        <tr class="active">
+            <td>状态</td>
+            <td><select id="status">
+                <option value="1">完成</option>
+                <option value="2">未完成</option>
+            </select></td>
+        </tr>
+        <tr class="success">
+            <td><button id="submit_btn" type="button" class="btn btn-primary">&nbsp;&nbsp;新增&nbsp;&nbsp;</button></td>
+            <td><button id="back_btn" type="button" class="btn btn-primary">&nbsp;&nbsp;返回&nbsp;&nbsp;</button></td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+</body>
+</html>
